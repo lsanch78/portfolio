@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+}
+
+img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: box-shadow 0.3s ease;
+}
+
+img.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image is cropped, not stretched */
+    transition: box-shadow 0.3s ease;
+}
+
+img:hover {
+    box-shadow: none;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+.name {
+    color: white;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem; /* Add this line to reduce space below the name */
+    letter-spacing: 1px;
+}
+
+.projects-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.project-btn {
+    width: 220px;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s, transform 0.2s, color 0.2s;
+}
+
+.project-btn:hover {
+    background: #f5f5f5;
+    color: #111;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtext {
+    color: #cccccc;
+    font-size: 1.2rem;
+    margin-top: 0;         /* Remove extra space above subtext */
+    margin-bottom: 0.1rem;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.project-preview {
+    margin-top: 1rem;
+    color: #fff;
+    background: #222;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    min-height: 2.2rem;
+    box-shadow: 0 0 16px 2px rgba(255,255,255,0.08);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Show preview when active */
+.project-preview.active {
+    opacity: 1;
+}
