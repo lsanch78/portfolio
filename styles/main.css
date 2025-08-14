@@ -108,3 +108,36 @@ img:hover {
 .project-preview.active {
     opacity: 1;
 }
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.social-btn svg {
+    display: block;
+}
+
+.social-btn.linkedin:hover {
+    box-shadow: 0 0 16px 2px #0077B5;
+    transform: scale(1.08);
+}
+
+.social-btn.github:hover {
+    box-shadow: 0 0 16px 2px #181717;
+    transform: scale(1.08);
+}
