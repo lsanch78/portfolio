@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             preview.classList.add('active');
         });
         btn.addEventListener('mouseleave', () => {
-            preview.textContent = '';
             preview.classList.remove('active');
         });
     });
